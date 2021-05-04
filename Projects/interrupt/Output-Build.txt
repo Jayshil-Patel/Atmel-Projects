@@ -1,0 +1,37 @@
+﻿------ Build started: Project: interrupt, Configuration: Debug AVR ------
+Build started.
+Project "interrupt.cproj" (default targets):
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Atmel Studio 6.0\Vs\Compiler.targets" from project "C:\Users\Jay\Documents\Atmel Studio\interrupt\interrupt\interrupt.cproj" (target "Build" depends on it):
+	Task "RunCompilerTask"
+		C:\Program Files (x86)\Atmel\Atmel Studio 6.0\make\make.exe all 
+		In file included from .././interrupt_test.c:11:0:
+c:\program files (x86)\atmel\atmel studio 6.0\extensions\atmel\avrgcc\3.4.1.95\avrtoolchain\bin\../lib/gcc/avr/4.6.2/../../../../avr/include/util/delay.h(90,3): #warning "F_CPU not defined for <util/delay.h>" [-Wcpp]
+		Building file: .././interrupt_test.c
+		Invoking: AVR/GNU C Compiler : (AVR_8_bit_GNU_Toolchain_3.4.1_830) 4.6.2
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.1.95\AVRToolchain\bin\avr-gcc.exe" -funsigned-char -funsigned-bitfields -O1 -fpack-struct -fshort-enums -g2 -Wall -c -std=gnu99 -MD -MP -MF "interrupt_test.d" -MT"interrupt_test.d" -MT"interrupt_test.o"  -mmcu=atmega32   -o"interrupt_test.o" ".././interrupt_test.c" 
+		Finished building: .././interrupt_test.c
+		Building target: interrupt.elf
+		Invoking: AVR/GNU Linker : (AVR_8_bit_GNU_Toolchain_3.4.1_830) 4.6.2
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.1.95\AVRToolchain\bin\avr-gcc.exe" -o interrupt.elf  interrupt_test.o   -Wl,-Map="interrupt.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group  -mmcu=atmega32  
+		Finished building target: interrupt.elf
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.1.95\AVRToolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature  "interrupt.elf" "interrupt.hex"
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.1.95\AVRToolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "interrupt.elf" "interrupt.eep" || exit 0
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.1.95\AVRToolchain\bin\avr-objdump.exe" -h -S "interrupt.elf" > "interrupt.lss"
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.1.95\AVRToolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature  "interrupt.elf" "interrupt.srec"
+		"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.1.95\AVRToolchain\bin\avr-size.exe" "interrupt.elf"
+		   text	   data	    bss	    dec	    hex	filename
+		    250	      0	      0	    250	     fa	interrupt.elf
+	Done executing task "RunCompilerTask".
+	Task "RunOutputFileVerifyTask"
+				Program Memory Usage 	:	250 bytes   0.8 % Full
+				Data Memory Usage 		:	0 bytes   0.0 % Full
+	Done executing task "RunOutputFileVerifyTask".
+Done building target "CoreBuild" in project "interrupt.cproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
+Target "Build" in file "C:\Program Files (x86)\Atmel\Atmel Studio 6.0\Vs\Avr.common.targets" from project "C:\Users\Jay\Documents\Atmel Studio\interrupt\interrupt\interrupt.cproj" (entry point):
+Done building target "Build" in project "interrupt.cproj".
+Done building project "interrupt.cproj".
+
+Build succeeded.
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
